@@ -1,7 +1,7 @@
-const apps = require('./raw-app-list')()
+import { apps }  from './raw-app-list'
 const parseGitUrl = require('github-url-to-object')
 
-module.exports = apps
+export const appsWithRepos = apps()
   .filter(app => {
     // inherit repository from website if possible
     if (!app.repository && parseGitUrl(app.website)) app.repository = app.website

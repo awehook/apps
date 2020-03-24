@@ -5,7 +5,7 @@
   "main": "index.json",
   "scripts": {
     "build": "npm-run-all build:*",
-    "build:clean": "node script/clean",
+    "build:clean": "ts-node script/clean.ts",
     "build:resize": "node script/resize",
     "build:dates": "node script/dates",
     "build:colors": "node script/colors",
@@ -33,6 +33,8 @@
   "author": "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^13.9.3",
+    "@types/rimraf": "^3.0.0",
     "@octokit/rest": "^15.15.1",
     "bottleneck": "^1.16.0",
     "chai": "^4.2.0",
@@ -66,7 +68,9 @@
     "sinon": "^7.2.2",
     "slugg": "^1.1.0",
     "standard": "^10.0.2",
-    "yamljs": "^0.2.8"
+    "yamljs": "^0.2.8",
+    "ts-node": "^8.8.1",
+    "typescript": "^3.8.3"
   },
   "engines": {
     "node": ">=8"

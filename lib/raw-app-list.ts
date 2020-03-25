@@ -1,6 +1,6 @@
 import * as fs from 'fs'
 import * as path from 'path'
-const yaml = require('yamljs')
+import * as yaml from 'js-yaml'
 
 export const apps = () =>
   fs.readdirSync(path.join(__dirname, '../apps'))
@@ -15,7 +15,7 @@ export const apps = () =>
           slug: slug,
           iconPath: path.join(__dirname, `../apps/${slug}/${slug}-icon.png`)
         },
-        yaml.load(yamlFile)
+        yaml.safeLoad(fs.readFileSync(yamlFile))
       )
       return app
     })

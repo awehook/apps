@@ -73,6 +73,7 @@
     "@types/json-stable-stringify": "^1.0.32",
     "yamljs": "^0.2.8",
     "js-yaml": "^3.13.1",
+    "@types/js-yaml": "^3.12.3",
     "json-stable-stringify": "^1.0.1",
     "mime-types": "^2.1.19",
     "rev-hash": "^3.0.0",
